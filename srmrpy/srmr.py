@@ -97,7 +97,7 @@ def srmr(x, fs, n_cochlear_filters=23, low_freq=125, min_cf=4, max_cf=128, fast=
     elif (BW > cutoffs[7]):
         Kstar=8
 
-    return np.sum(avg_energy[:, :4])/np.sum(avg_energy[:, 4:Kstar]), energy
+    return np.sum(avg_energy[:, :4])/np.sum(avg_energy[:, 4:Kstar])
 
 def process_file(f, args):
     fs, s = readwav(f)
